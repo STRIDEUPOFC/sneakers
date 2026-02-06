@@ -268,66 +268,58 @@ html, body {
         .img-placeholder img { width: 100%; display: block; filter: grayscale(20%); }
 
 /* --- REVIEWS --- */
-        .reviews-section { background: var(--bg-deep); padding-bottom: 120px; }
-        
-        .marquee-wrapper {
-            width: 100%;
-            display: flex;
-            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-        }
-
-        .marquee-content {
-            display: flex;
-            gap: 25px;
-            animation: scrollLeft 40s linear infinite;
-            padding: 20px 0;
-            /* ADICIONADO: Alinha os cards pelo topo. Isso impede que um card comprido estique os outros */
-            align-items: flex-start; 
-        }
-
-        @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-        .review-card {
-            background: var(--bg-card);
-            min-width: 380px;
-            padding: 35px;
-            border-radius: 4px;
-            border: 1px solid var(--border-subtle);
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        /* --- CLASSE AJUSTADA: FOTOS REAIS --- */
-        .review-product-photo {
-            width: 100%;
-            height: auto;       /* Permite que a altura se adapte à foto original */
-            max-height: 600px;  /* Segura fotos muito gigantes de celular para não quebrar a tela */
-            object-fit: contain; /* Garante que a imagem apareça inteira, sem cortes */
-            border-radius: 4px;
-            margin-top: 10px;
-            margin-bottom: 5px;
-            border: 1px solid var(--border-subtle);
-            filter: grayscale(20%);
-            transition: var(--transition);
-        }
-        
-        .review-card:hover .review-product-photo {
-            filter: grayscale(0%);
-        }
-
-        .client-avatar { width: 50px; height: 50px; border-radius: 50%; filter: grayscale(100%); border: 2px solid var(--border-subtle); }
-        .stars { color: var(--accent); letter-spacing: 2px; }
-        .purchased-item { font-size: 0.65rem; color: #fff; background: rgba(255,255,255,0.05); padding: 5px 12px; border: 1px solid var(--border-subtle); border-radius: 2px; width: fit-content; }
-
-        /* Ajuste Mobile */
-        @media (max-width: 768px) {
-            .review-card {
-                min-width: 320px; /* Card um pouco menor em telas pequenas */
-                padding: 25px;
-            }
+        .reviews-section { background: var(--bg-deep); padding-bottom: 120px; }
+        
+        .marquee-wrapper {
+            width: 100%;
+            display: flex;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
         }
+
+        .marquee-content {
+            display: flex;
+            gap: 25px;
+            animation: scrollLeft 40s linear infinite;
+            padding: 20px 0;
+            /* ADICIONADO: Alinha os cards pelo topo. Isso impede que um card comprido estique os outros */
+            align-items: flex-start; 
+        }
+
+        @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        .review-card {
+            background: var(--bg-card);
+            min-width: 380px;
+            padding: 35px;
+            border-radius: 4px;
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* --- CLASSE AJUSTADA: FOTOS REAIS --- */
+        .review-product-photo {
+            width: 100%;
+            height: auto;       /* Permite que a altura se adapte à foto original */
+            max-height: 600px;  /* Segura fotos muito gigantes de celular para não quebrar a tela */
+            object-fit: contain; /* Garante que a imagem apareça inteira, sem cortes */
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            border: 1px solid var(--border-subtle);
+            filter: grayscale(20%);
+            transition: var(--transition);
+        }
+        
+        .review-card:hover .review-product-photo {
+            filter: grayscale(0%);
+        }
+
+        .client-avatar { width: 50px; height: 50px; border-radius: 50%; filter: grayscale(100%); border: 2px solid var(--border-subtle); }
+        .stars { color: var(--accent); letter-spacing: 2px; }
+        .purchased-item { font-size: 0.65rem; color: #fff; background: rgba(255,255,255,0.05); padding: 5px 12px; border: 1px solid var(--border-subtle); border-radius: 2px; width: fit-content; }
         /* --- FEATURES --- */
         .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
         .feature-card { padding: 40px; background: var(--bg-card); border: 1px solid var(--border-subtle); transition: var(--transition); border-radius: 4px;}
